@@ -174,7 +174,7 @@ export default function Services() {
                 last.
               </p>
               <ul className="space-y-3 text-gray-600 mb-8">
-                <li>• Custom Furniture Design</li>
+                <li>• Furniture Design</li>
                 <li>• Built-in Storage Solutions</li>
                 <li>• Material & Finish Selection</li>
                 <li>• Prototype Development</li>

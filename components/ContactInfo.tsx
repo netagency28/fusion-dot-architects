@@ -24,21 +24,16 @@ function ContactInfo() {
           <Mail className="w-6 h-6 mr-4 mt-1 text-gray-400" />
           <div>
             <h4 className="font-light text-lg mb-2">Email</h4>
-            <p className="text-gray-600">hello@fusiondot.com</p>
-            <p className="text-gray-600">projects@fusiondot.com</p>
+            <p className="text-gray-600">fusiondotcreatives@gmail.com</p>
           </div>
         </div>
 
         <div className="flex items-start">
           <MapPin className="w-6 h-6 mr-4 mt-1 text-gray-400" />
           <div>
-            <h4 className="font-light text-lg mb-2">Studio Address</h4>
+            <h4 className="font-light text-lg mb-2">Office Address</h4>
             <p className="text-gray-600">
-              123 Design District
-              <br />
-              Bandra West, Mumbai 400050
-              <br />
-              Maharashtra, India
+            3rd Street PRP nagar cross near, <br/> main, road, near Sarada College Road, <br/> Salem, Tamil Nadu 636016
             </p>
           </div>
         </div>
