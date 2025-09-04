@@ -33,14 +33,15 @@ function ContactForm() {
   const sendEmail = async (emailData: FormData) => {
     console.log("📤 Attempting to send email:", emailData);
     
-    // EmailJS configuration - you'll need to replace these with your actual EmailJS credentials
-    const serviceId = 'service_rc12r84'; // Your EmailJS service ID
-    const templateId = 'template_bjgmhvi'; // You need to replace this with your actual template ID
-    const publicKey = 'BDxrvXML2lhiWhA-b'; // Your EmailJS public key
+    // EmailJS configuration from environment variables
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_rc12r84';
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_bjgmhvi';
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'BDxrvXML2lhiWhA-b';
+    const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'netagency10@gmail.com';
     
     try {
       const templateParams = {
-        to_email: 'netagency10@gmail.com', // Using the email from your EmailJS service
+        to_email: contactEmail, // Using the email from environment variables
         from_name: emailData.name,
         from_email: emailData.email,
         phone: emailData.phone,
@@ -141,13 +142,15 @@ Sent from Fusion Dot Architects website`;
       // Create WhatsApp message
       console.log("📱 Creating WhatsApp message...");
       const whatsappMessage = createWhatsAppMessage(formData);
-      const whatsappLink = `https://wa.me/919986639995?text=${encodeURIComponent(whatsappMessage)}`;
+      const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919986639995';
+      const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
       console.log("📱 WhatsApp link created:", whatsappLink);
 
       // Create email content for fallback
       console.log("📧 Creating fallback email content...");
       const emailContent = createEmailContent(formData);
-      const emailLink = `mailto:sanjayvihaan111@gmail.com?subject=${encodeURIComponent(emailContent.subject)}&body=${encodeURIComponent(emailContent.body)}`;
+      const fallbackEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'netagency10@gmail.com';
+      const emailLink = `mailto:${fallbackEmail}?subject=${encodeURIComponent(emailContent.subject)}&body=${encodeURIComponent(emailContent.body)}`;
       console.log("📧 Email link created:", emailLink);
 
       if (emailSent) {
@@ -236,12 +239,14 @@ Sent from Fusion Dot Architects website`;
 
   const directWhatsApp = () => {
     const message = `Hello! I'm interested in your architectural services. I found you through your website and would like to discuss a project.`;
-    const whatsappLink = `https://wa.me/919986639995?text=${encodeURIComponent(message)}`;
+    const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919986639995';
+    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappLink, '_blank');
   };
 
   const directEmail = () => {
-    const mailtoLink = `mailto:sanjayvihaan111@gmail.com?subject=Project Inquiry&body=Hello! I'm interested in your architectural services. I found you through your website and would like to discuss a project.`;
+    const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'netagency10@gmail.com';
+    const mailtoLink = `mailto:${contactEmail}?subject=Project Inquiry&body=Hello! I'm interested in your architectural services. I found you through your website and would like to discuss a project.`;
     window.open(mailtoLink, '_blank');
   };
 
