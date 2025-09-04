@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
-function BuildCTASection() {
+export default function BuildCTASection() {
   return (
     <section className="relative w-full">
       {/* Background Image with Overlay Content */}
@@ -17,10 +17,10 @@ function BuildCTASection() {
         {/* Content Overlay */}
         <div className="absolute inset-0 flex flex-col justify-between px-6 py-10 md:px-20 md:py-16 text-white bg-black/30">
           {/* Top Right Image */}
-          <div className="flex justify-end">
+          {/* <div className="flex justify-end">
             <div className="relative w-[240px] md:w-[280px] h-[360px]">
               <Image
-                src="/images/cta-right-image.jpg"
+                src="https://res.cloudinary.com/dytr7tpmt/image/upload/v1757005989/4_wucrx0.jpg"
                 alt="Collin College"
                 fill
                 className="object-cover"
@@ -29,7 +29,7 @@ function BuildCTASection() {
                 Collin College, Technical Campus
               </p>
             </div>
-          </div>
+          </div> */}
 
           {/* Bottom Left Text + Button */}
           <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full">
@@ -65,5 +65,3 @@ function BuildCTASection() {
     </section>
   )
 }
-
-export { BuildCTASection }

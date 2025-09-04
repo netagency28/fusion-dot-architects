@@ -1,14 +1,14 @@
 import { Navbar } from "@/components/Navbar";
 import { HeroSlider } from "@/components/HeroSlider";
 import { AnimatedSection } from "@/components/AnimatedSection";
-import { ContactForm } from "@/components/ContactForm";
+import ContactForm from "@/components/ContactForm";
 import { ContactInfo } from "@/components/ContactInfo";
-import { StudioMap } from "@/components/StudioMap";
-import { AboutServices } from "@/components/AboutServices";
-import { SelectedWork } from "@/components/SelectedWork";
-import { OurProcessSection } from "@/components/OurProcessSection";
-import { BuildCTASection } from "@/components/BuildCTASection";
-import { Footer } from "@/components/Footer";
+import StudioMap from "@/components/StudioMap";
+import AboutServices from "@/components/AboutServices";
+import SelectedWork from "@/components/SelectedWork";
+import OurProcessSection from "@/components/OurProcessSection";
+import BuildCTASection from "@/components/BuildCTASection";
+import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
@@ -24,8 +24,8 @@ export default function HomePage() {
           <ContactForm />
           <ContactInfo />
         </div>
-      </AnimatedSection>
-      <StudioMap /> */}
+      </AnimatedSection> */}
+      <StudioMap />
       <Footer />
     </div>
   );

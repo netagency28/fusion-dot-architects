@@ -38,7 +38,7 @@ const steps: Step[] = [
   
 ]
 
-function OurProcessSection() {
+export default function OurProcessSection() {
   const [openIndex, setOpenIndex] = useState(0)
 
   const toggle = (index: number) => {
@@ -71,15 +71,11 @@ function OurProcessSection() {
 
                   <AnimatePresence>
                     {isOpen && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                      <div
                         className="overflow-hidden text-sm text-gray-600 mt-4 pr-2"
                       >
                         {step.content}
-                      </motion.div>
+                      </div>
                     )}
                   </AnimatePresence>
                 </div>
@@ -103,5 +99,3 @@ function OurProcessSection() {
   )
 }
 
-
-export {OurProcessSection}

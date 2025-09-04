@@ -3,17 +3,17 @@ import { FaInstagram, FaFacebookF, FaPinterestP } from "react-icons/fa"
 import { TbArrowBigUpLines } from "react-icons/tb"
 import { PiBuildingsFill } from "react-icons/pi" // Custom logo icon
 
-function Footer() {
+export default function Footer() {
   return (
     <footer className="bg-white border-t text-black">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-20 py-12 border-b">
         {/* Left: Contact Info */}
         <div className="space-y-4 text-sm">
-          <p className="font-medium underline underline-offset-4">hello@minnaro.com</p>
-          <p className="border-b border-gray-400 inline-block pb-1">+1 2030 4050 10</p>
+          <p className="font-medium underline underline-offset-4"><a href="mailto:fusiondotcreatives@gmail.com">fusiondotcreatives@gmail.com</a></p>
+          <p className="border-b border-gray-400 inline-block pb-1"><a href="tel:+918903014877">+91 8903014877</a></p>
           <div className="text-gray-600">
-            <p>New York,</p>
-            <p>Seventh Ave, 20th Floor, NY 10018</p>
+            <p>3rd Street PRP nagar cross near, main, road, near Sarada College Road,</p>
+            <p>Salem, Tamil Nadu 636016</p>
           </div>
           <Link href="/contact" className="inline-flex items-center font-semibold underline underline-offset-4 hover:opacity-80 transition">
             Contact us <span className="ml-1">→</span>
@@ -28,15 +28,10 @@ function Footer() {
         </div>
 
         {/* Right: Links */}
-        <div className="grid grid-cols-2 gap-y-3 text-sm text-right md:text-left">
+        <div className="grid grid-cols-3 gap-y-3 text-sm text-right md:text-left">
           <Link href="/about">About</Link>
           <Link href="/services">Services</Link>
-          <Link href="/people">People</Link>
-          <Link href="/portfolio">Portfolio</Link>
-          <Link href="/career">Career</Link>
-          <Link href="/reviews">Reviews</Link>
           <Link href="/our-process">Our Process</Link>
-          <Link href="/media-awards">Media & Awards</Link>
         </div>
       </div>
 
@@ -59,5 +54,3 @@ function Footer() {
   )
 }
 
-
-export { Footer }
