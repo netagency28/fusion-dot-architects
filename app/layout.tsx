@@ -13,7 +13,10 @@ export const metadata: Metadata = {
   title: "Fusion Dot Architects - Modern Architecture & Design",
   description:
     "Creating exceptional spaces through innovative design and meticulous craftsmanship. Specializing in architecture, interior design, furniture design, and construction.",
-    generator: 'v0.dev'
+  generator: 'v0.dev',
+  icons: {
+    icon: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1769268290/Logo_a7lxow.png",
+  },
 }
 
 export default function RootLayout({

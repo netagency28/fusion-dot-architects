@@ -7,6 +7,7 @@ import { useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft, MapPin, Calendar, ArrowRight } from "lucide-react"
+import { Navbar } from "@/components/Navbar"
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef(null)
@@ -84,45 +85,9 @@ export default function Work() {
   ]
 
   return (
-    <div className="min-h-screen bg-white pt-20">
+    <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <motion.nav
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100"
-      >
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <motion.div whileHover={{ scale: 1.05 }} className="text-xl font-light tracking-wide">
-            <Link href="/">Fusion Dot Architects</Link>
-          </motion.div>
-          <div className="hidden md:flex space-x-8 text-sm font-light">
-            {[
-              { name: "Work", href: "/work" },
-              { name: "Services", href: "/services" },
-              { name: "About", href: "/about" },
-              { name: "Contact", href: "/contact" },
-            ].map((item, index) => (
-              <motion.div
-                key={item.name}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 + 0.3 }}
-                whileHover={{ y: -2 }}
-              >
-                <Link
-                  href={item.href}
-                  className={`hover:text-gray-600 transition-colors cursor-pointer ${
-                    item.href === "/work" ? "text-black font-medium" : ""
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.nav>
+      <Navbar />
 
       {/* Hero Section */}
       <section className="relative h-96 flex items-center justify-center overflow-hidden">

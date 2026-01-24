@@ -74,7 +74,7 @@ export default function About() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-light mb-8 tracking-wide">Our Story</h2>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Founded in 2009, Fusion Dot Architects has been at the forefront of contemporary design, creating spaces
+              Founded in 2019, Fusion Dot Architects has been at the forefront of contemporary design, creating spaces
               that inspire and endure.
             </p>
           </div>
