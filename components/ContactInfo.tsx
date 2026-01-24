@@ -15,8 +15,8 @@ function ContactInfo() {
           <Phone className="w-6 h-6 mr-4 mt-1 text-gray-400" />
           <div>
             <h4 className="font-light text-lg mb-2">Phone</h4>
-            <p className="text-gray-600">+91 98765 43210</p>
-            <p className="text-gray-600">+91 98765 43211</p>
+            <p className="text-gray-600">+91 8903014877</p>
+            <p className="text-gray-600">+91 9442042466</p>
           </div>
         </div>
 

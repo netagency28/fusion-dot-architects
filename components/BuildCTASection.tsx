@@ -49,10 +49,10 @@ export default function BuildCTASection() {
       {/* Stats Section */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-y-6 px-6 md:px-20 py-12 bg-white text-center text-black">
         {[
-          { number: "10+", label: "Year of experience" },
-          { number: "200+", label: "Residential Projects Completed" },
-          { number: "100+", label: "Commercial Spaces Transformed" },
-          { number: "400+", label: "Serving Clients Nationwide" },
+          { number: "6+", label: "Year of experience" },
+          { number: "30+", label: "Residential Projects Completed" },
+          { number: "30+", label: "Commercial Spaces Transformed" },
+          { number: "100+", label: "Serving Clients Nationwide" },
         ].map(({ number, label }) => (
           <div key={label}>
             <p className="text-2xl font-semibold">{number}</p>
