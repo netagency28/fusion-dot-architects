@@ -261,10 +261,6 @@ export default function Gallery() {
                     <h3 className="text-lg font-medium group-hover:text-gray-600 transition-colors">
                       {project.title}
                     </h3>
-                    <div className="flex items-center text-sm text-gray-500 space-x-4">
-                      <span>{project.year}</span>
-                    </div>
-                    <p className="text-sm text-gray-600 line-clamp-2">{project.description}</p>
                   </div>
                 </div>
                 {/* </Link> */}

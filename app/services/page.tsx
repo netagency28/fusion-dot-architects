@@ -11,7 +11,15 @@ import { Button } from "@/components/ui/button"
 import { Navbar } from "@/components/Navbar"
 import { Nabla } from "next/font/google"
 
-function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+function AnimatedSection({
+  children,
+  className = "",
+  id = "",
+}: {
+  children: React.ReactNode
+  className?: string
+  id?: string
+}) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
@@ -22,6 +30,7 @@ function AnimatedSection({ children, className = "" }: { children: React.ReactNo
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       className={className}
+      id={id}
     >
       {children}
     </motion.div>
@@ -42,7 +51,7 @@ export default function Services() {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="absolute inset-0"
         >
-          <Image src="/images/construction-site.jpg" alt="Our Services" fill className="object-cover" priority />
+          <Image src="https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692669/MA_FISH_4_jdbwug.jpg" alt="Our Services" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-black/40" />
         </motion.div>
 
@@ -85,7 +94,7 @@ export default function Services() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div whileHover={{ scale: 1.02 }} className="relative h-96">
-              <Image src="/images/project-1.jpg" alt="Architecture Services" fill className="object-cover rounded-lg" />
+              <Image src="https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692536/10_1_-_Photo_zo09ut.jpg" alt="Architecture Services" fill className="object-cover rounded-lg" />
             </motion.div>
             <div>
               <div className="flex items-center mb-6">
@@ -141,7 +150,7 @@ export default function Services() {
             </div>
             <motion.div whileHover={{ scale: 1.02 }} className="relative h-96">
               <Image
-                src="/images/interior-design.jpg"
+                src="https://res.cloudinary.com/dytr7tpmt/image/upload/v1757693036/02-6_rje7ml.jpg"
                 alt="Interior Design Services"
                 fill
                 className="object-cover rounded-lg"
@@ -157,7 +166,7 @@ export default function Services() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div whileHover={{ scale: 1.02 }} className="relative h-96">
               <Image
-                src="/images/project-2.jpg"
+                src="https://res.cloudinary.com/dytr7tpmt/image/upload/v1757693021/01_6_-_Photo_zocpd0.jpg"
                 alt="Furniture Design Services"
                 fill
                 className="object-cover rounded-lg"
@@ -217,7 +226,7 @@ export default function Services() {
             </div>
             <motion.div whileHover={{ scale: 1.02 }} className="relative h-96">
               <Image
-                src="/images/construction-site.jpg"
+                src="https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692619/48793eb6-dee6-407a-95f3-7a0ea311c4e9_hwvdna.jpg"
                 alt="Construction Services"
                 fill
                 className="object-cover rounded-lg"
