@@ -7,24 +7,7 @@ import { Navbar } from "@/components/Navbar"
 
 export default function Gallery() {
   const projects = [
-    {
-      id: "architecture-project-1",
-      title: "Modern Architectural Design",
-      location: "Mumbai",
-      year: "2024",
-      category: "Architecture",
-      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692536/10_1_-_Photo_zo09ut.jpg",
-      description: "Contemporary architectural design showcasing innovative structural solutions and modern aesthetics.",
-    },
-    {
-      id: "architecture-project-2",
-      title: "Residential Architecture",
-      location: "Delhi",
-      year: "2024",
-      category: "Architecture",
-      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692534/IMG_0247_kn4tue.png",
-      description: "Elegant residential architecture with clean lines and functional design principles.",
-    },
+    // Commercial Projects
     {
       id: "commercial-project-1",
       title: "Fish Market Design",
@@ -35,6 +18,109 @@ export default function Gallery() {
       description: "Innovative fish market design combining functionality with modern commercial architecture.",
     },
     {
+      id: "commercial-project-2",
+      title: "Fish Market Concept",
+      location: "Kochi",
+      year: "2024",
+      category: "Commercial",
+      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692671/fish_v4_pn9hg1.png",
+      description: "Modern commercial space designed for optimal functionality and aesthetic appeal.",
+    },
+    {
+      id: "commercial-project-3",
+      title: "Market Architecture",
+      location: "Kochi",
+      year: "2024",
+      category: "Commercial",
+      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692669/MA_FISH_msi6kf.jpg",
+      description: "Contemporary market design with innovative structural solutions.",
+    },
+    {
+      id: "commercial-project-4",
+      title: "Commercial Space Design",
+      location: "Kochi",
+      year: "2024",
+      category: "Commercial",
+      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692669/MA_FISH_4_jdbwug.jpg",
+      description: "Functional commercial architecture with modern design principles.",
+    },
+    {
+      id: "commercial-project-5",
+      title: "Commercial Building",
+      location: "Mumbai",
+      year: "2024",
+      category: "Commercial",
+      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692664/29_19_-_Photo_adprge.jpg",
+      description: "Modern commercial building showcasing contemporary architectural design.",
+    },
+    {
+      id: "commercial-project-6",
+      title: "Office Complex",
+      location: "Delhi",
+      year: "2024",
+      category: "Commercial",
+      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692662/11_5_-_Photo_le1raa.jpg",
+      description: "Sophisticated office complex with innovative design solutions.",
+    },
+    {
+      id: "commercial-project-7",
+      title: "Commercial Development",
+      location: "Bangalore",
+      year: "2024",
+      category: "Commercial",
+      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692619/48793eb6-dee6-407a-95f3-7a0ea311c4e9_hwvdna.jpg",
+      description: "Contemporary commercial development with modern amenities.",
+    },
+    
+    // Architecture Projects
+    {
+      id: "architecture-project-1",
+      title: "Modern Architectural Design",
+      location: "Mumbai",
+      year: "2024",
+      category: "Architecture",
+      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692536/10_1_-_Photo_zo09ut.jpg",
+      description: "Contemporary architectural design showcasing innovative structural solutions.",
+    },
+    {
+      id: "architecture-project-2",
+      title: "Residential Architecture",
+      location: "Delhi",
+      year: "2024",
+      category: "Architecture",
+      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692526/10_2_-_Photo_jnta93.jpg",
+      description: "Elegant residential architecture with clean lines and functional design.",
+    },
+    {
+      id: "architecture-project-3",
+      title: "Contemporary Building",
+      location: "Pune",
+      year: "2024",
+      category: "Architecture",
+      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692522/IMG_1743_dpafzx.png",
+      description: "Modern building design with innovative architectural elements.",
+    },
+    {
+      id: "architecture-project-4",
+      title: "Architectural Excellence",
+      location: "Chennai",
+      year: "2024",
+      category: "Architecture",
+      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692522/IMG_1744_qxnmok.png",
+      description: "Sophisticated architectural design with attention to detail.",
+    },
+    {
+      id: "architecture-project-5",
+      title: "Modern Structure",
+      location: "Hyderabad",
+      year: "2024",
+      category: "Architecture",
+      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692520/IMG_0172_kxzjb5.jpg",
+      description: "Contemporary structural design with modern aesthetics.",
+    },
+    
+    // Interior Projects
+    {
       id: "interior-project-1",
       title: "Modern Interior Design",
       location: "Mumbai",
@@ -42,6 +128,78 @@ export default function Gallery() {
       category: "Interior",
       image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757693036/02-6_rje7ml.jpg",
       description: "Contemporary interior design with clean lines and modern aesthetics.",
+    },
+    {
+      id: "interior-project-2",
+      title: "Elegant Interior Space",
+      location: "Delhi",
+      year: "2024",
+      category: "Interior",
+      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757693032/09-2_aq4oq5.jpg",
+      description: "Sophisticated interior design with luxurious finishes.",
+    },
+    {
+      id: "interior-project-3",
+      title: "Contemporary Interior",
+      location: "Bangalore",
+      year: "2024",
+      category: "Interior",
+      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757693021/01_6_-_Photo_zocpd0.jpg",
+      description: "Modern interior space with functional design elements.",
+    },
+    {
+      id: "interior-project-4",
+      title: "Luxury Interior Design",
+      location: "Pune",
+      year: "2024",
+      category: "Interior",
+      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757693017/4_uaf35x.jpg",
+      description: "High-end interior design with premium materials and finishes.",
+    },
+    {
+      id: "interior-project-5",
+      title: "Modern Living Space",
+      location: "Chennai",
+      year: "2024",
+      category: "Interior",
+      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757693006/2_10_-_Photo_dokgyt.jpg",
+      description: "Contemporary living space with innovative design solutions.",
+    },
+    {
+      id: "interior-project-6",
+      title: "Residential Interior",
+      location: "Hyderabad",
+      year: "2024",
+      category: "Interior",
+      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757693004/IMG_0879_mpfgqj.jpg",
+      description: "Elegant residential interior with modern amenities.",
+    },
+    {
+      id: "interior-project-7",
+      title: "Designer Interior",
+      location: "Kolkata",
+      year: "2024",
+      category: "Interior",
+      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692999/01_10_-_Photo_awygxp.jpg",
+      description: "Sophisticated interior design with contemporary styling.",
+    },
+    {
+      id: "interior-project-8",
+      title: "Premium Interior Space",
+      location: "Ahmedabad",
+      year: "2024",
+      category: "Interior",
+      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692997/2_7_-_Photo_myzmda.jpg",
+      description: "Luxurious interior design with attention to detail.",
+    },
+    {
+      id: "interior-project-9",
+      title: "Contemporary Living",
+      location: "Jaipur",
+      year: "2024",
+      category: "Interior",
+      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692984/d868f1a2-eea6-4b6e-b040-2acef318137c_mzppxo.jpg",
+      description: "Modern interior design with functional elegance.",
     },
   ]
 
@@ -83,7 +241,8 @@ export default function Gallery() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project) => (
               <div key={project.id} className="group cursor-pointer">
-                <Link href={`/work/${project.id}`}>
+                {/* <Link href={`/work/${project.id}`}> */}
+                <div className="block">
                   <div className="relative h-80 mb-4 overflow-hidden rounded-lg">
                     <Image
                       src={project.image}
@@ -103,12 +262,12 @@ export default function Gallery() {
                       {project.title}
                     </h3>
                     <div className="flex items-center text-sm text-gray-500 space-x-4">
-                      <span>{project.location}</span>
                       <span>{project.year}</span>
                     </div>
                     <p className="text-sm text-gray-600 line-clamp-2">{project.description}</p>
                   </div>
-                </Link>
+                </div>
+                {/* </Link> */}
               </div>
             ))}
           </div>
