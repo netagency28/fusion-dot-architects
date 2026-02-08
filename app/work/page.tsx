@@ -6,7 +6,7 @@ import { useInView } from "framer-motion"
 import { useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, MapPin, Calendar, ArrowRight } from "lucide-react"
+import { ArrowLeft, ArrowRight } from "lucide-react"
 import { Navbar } from "@/components/Navbar"
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
@@ -29,58 +29,52 @@ function AnimatedSection({ children, className = "" }: { children: React.ReactNo
 export default function Work() {
   const projects = [
     {
-      id: "modern-residence",
-      title: "Modern Residence",
-      location: "Mumbai",
-      year: "2023",
-      category: "Residential",
-      image: "/images/project-1.jpg",
-      description: "A contemporary family home that seamlessly blends indoor and outdoor living.",
-    },
-    {
-      id: "corporate-office",
-      title: "Corporate Office",
-      location: "Delhi",
-      year: "2023",
+      id: "commercial-fish-market",
+      title: "Fish Market Design",
+      year: "2024",
       category: "Commercial",
-      image: "/images/project-2.jpg",
-      description: "A modern workspace designed to inspire creativity and collaboration.",
+      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692671/MA_FISH_3_h2dexk.jpg",
+      description: "Innovative fish market design combining functionality with modern commercial architecture.",
     },
     {
-      id: "luxury-villa",
-      title: "Luxury Villa",
-      location: "Goa",
-      year: "2022",
-      category: "Residential",
-      image: "/images/project-3.jpg",
-      description: "An elegant beachfront villa with panoramic ocean views.",
+      id: "modern-architecture",
+      title: "Modern Architectural Design",
+      year: "2024",
+      category: "Architecture",
+      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692536/10_1_-_Photo_zo09ut.jpg",
+      description: "Contemporary architectural design showcasing innovative structural solutions.",
     },
     {
-      id: "boutique-hotel",
-      title: "Boutique Hotel",
-      location: "Jaipur",
-      year: "2022",
-      category: "Hospitality",
-      image: "/images/modern-building.jpg",
-      description: "A luxury boutique hotel that celebrates local culture and craftsmanship.",
+      id: "modern-interior",
+      title: "Modern Interior Design",
+      year: "2024",
+      category: "Interior",
+      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757693036/02-6_rje7ml.jpg",
+      description: "Contemporary interior design with clean lines and modern aesthetics.",
     },
     {
-      id: "art-gallery",
-      title: "Contemporary Art Gallery",
-      location: "Bangalore",
-      year: "2021",
-      category: "Cultural",
-      image: "/images/interior-design.jpg",
-      description: "A minimalist gallery space designed to showcase contemporary art.",
+      id: "commercial-office",
+      title: "Office Complex",
+      year: "2024",
+      category: "Commercial",
+      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692662/11_5_-_Photo_le1raa.jpg",
+      description: "Sophisticated office complex with innovative design solutions.",
     },
     {
-      id: "residential-complex",
-      title: "Residential Complex",
-      location: "Pune",
-      year: "2021",
-      category: "Residential",
-      image: "/images/construction-site.jpg",
-      description: "A sustainable residential development with community-focused design.",
+      id: "residential-architecture",
+      title: "Residential Architecture",
+      year: "2024",
+      category: "Architecture",
+      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692526/10_2_-_Photo_jnta93.jpg",
+      description: "Elegant residential architecture with clean lines and functional design.",
+    },
+    {
+      id: "luxury-interior",
+      title: "Luxury Interior Design",
+      year: "2024",
+      category: "Interior",
+      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757693017/4_uaf35x.jpg",
+      description: "High-end interior design with premium materials and finishes.",
     },
   ]
 
@@ -150,7 +144,8 @@ export default function Work() {
                 whileHover={{ y: -10 }}
                 className="group cursor-pointer"
               >
-                <Link href={`/work/${project.id}`}>
+                {/* <Link href={`/work/${project.id}`}> */}
+                <div className="block">
                   <div className="relative h-80 mb-6 overflow-hidden rounded-lg">
                     <Image
                       src={project.image || "/placeholder.svg"}
@@ -159,12 +154,12 @@ export default function Work() {
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-                    <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {/* <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="flex items-center text-sm">
                         <span>View Project</span>
                         <ArrowRight size={16} className="ml-2" />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                   <div className="space-y-2">
                     <div className="flex items-center justify-between">
@@ -173,19 +168,9 @@ export default function Work() {
                         {project.category}
                       </span>
                     </div>
-                    <div className="flex items-center text-sm text-gray-600 space-x-4">
-                      <div className="flex items-center">
-                        <MapPin size={14} className="mr-1" />
-                        {project.location}
-                      </div>
-                      <div className="flex items-center">
-                        <Calendar size={14} className="mr-1" />
-                        {project.year}
-                      </div>
-                    </div>
-                    <p className="text-gray-600 text-sm leading-relaxed">{project.description}</p>
                   </div>
-                </Link>
+                </div>
+                {/* </Link> */}
               </motion.div>
             ))}
           </motion.div>

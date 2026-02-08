@@ -6,7 +6,7 @@ import { useInView } from "framer-motion"
 import { useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, MapPin, Calendar, Users, Square } from "lucide-react"
+import { ArrowLeft, Calendar, Users, Square } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Navbar } from "@/components/Navbar"
 
@@ -31,7 +31,6 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
   // Mock project data - in a real app, this would come from a CMS or API
   const project = {
     title: "Modern Residence",
-    location: "Mumbai",
     year: "2023",
     category: "Residential",
     client: "The Kumar Family",
@@ -108,10 +107,6 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
               className="flex items-center text-white text-lg space-x-6"
             >
               <div className="flex items-center">
-                <MapPin size={18} className="mr-2" />
-                {project.location}
-              </div>
-              <div className="flex items-center">
                 <Calendar size={18} className="mr-2" />
                 {project.year}
               </div>
@@ -161,13 +156,6 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
                   <div>
                     <div className="text-sm text-gray-500">Duration</div>
                     <div className="font-light">{project.duration}</div>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <MapPin className="w-5 h-5 mr-3 text-gray-400" />
-                  <div>
-                    <div className="text-sm text-gray-500">Location</div>
-                    <div className="font-light">{project.location}</div>
                   </div>
                 </div>
               </div>

@@ -6,19 +6,28 @@ import { motion } from "framer-motion"
 
 const projects = [
   {
-    title: "",
-    location: "",
-    image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1756047461/1_rknxoa.jpg",
+    title: "Commercial Architecture",
+    image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692671/MA_FISH_3_h2dexk.jpg",
   },
   {
-    title: "",
-    location: "",
-    image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1756047461/3_ocsui2.jpg",
+    title: "Modern Interior",
+    image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757693036/02-6_rje7ml.jpg",
   },
   {
-    title: "",
-    location: "",
-    image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1756047460/2_uiiaxb.jpg",
+    title: "Architectural Design",
+    image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692536/10_1_-_Photo_zo09ut.jpg",
+  },
+  {
+    title: "Commercial Space",
+    image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692669/MA_FISH_4_jdbwug.jpg",
+  },
+  {
+    title: "Luxury Interior",
+    image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757693017/4_uaf35x.jpg",
+  },
+  {
+    title: "Modern Structure",
+    image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692522/IMG_1744_qxnmok.png",
   },
 ]
 
@@ -60,7 +69,6 @@ export default function SelectedWork() {
               />
             </div>
             <h3 className="text-lg font-medium group-hover:text-gray-600 transition-colors">{project.title}</h3>
-            <p className="text-xs text-gray-500 uppercase tracking-wider">{project.location}</p>
           </Link>
         ))}
       </div>
