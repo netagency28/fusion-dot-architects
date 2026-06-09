@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
+import { IMAGES } from "@/lib/images"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     "Creating exceptional spaces through innovative design and meticulous craftsmanship. Specializing in architecture, interior design, furniture design, and construction.",
   generator: 'v0.dev',
   icons: {
-    icon: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1769268290/Logo_a7lxow.png",
+    icon: IMAGES.favicon,
   },
 }
 

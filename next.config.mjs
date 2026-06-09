@@ -6,6 +6,7 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  outputFileTracingRoot: import.meta.dirname,
   images: {
     unoptimized: true,
     remotePatterns: [

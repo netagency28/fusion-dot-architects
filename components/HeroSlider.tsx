@@ -2,12 +2,9 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { IMAGES } from "@/lib/images";
 
-const images = [
-  "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692536/10_1_-_Photo_zo09ut.jpg",
-  "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757693036/02-6_rje7ml.jpg",
-  "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692671/MA_FISH_3_h2dexk.jpg",
-];
+const images = IMAGES.heroSlides;
 
 function HeroSlider() {
   const [current, setCurrent] = useState(0);

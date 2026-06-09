@@ -4,6 +4,7 @@ import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import Image from "next/image"
 import { Minus, Plus } from "lucide-react"
+import { IMAGES } from "@/lib/images"
 
 type Step = {
   title: string
@@ -87,7 +88,7 @@ export default function OurProcessSection() {
         {/* Right side – Architectural Drawing Image */}
         <div className="relative w-full h-[480px]">
           <Image
-            src="https://minnaro.vamtam.com/wp-content/uploads/2025/06/2985394.svg"
+            src={IMAGES.processDrawing}
             alt="Architectural Drawing"
             fill
             className="object-contain object-center opacity-80"

@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/image"
+import { IMAGES } from "@/lib/images";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -36,7 +37,7 @@ function Navbar() {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="text-lg font-semibold tracking-wide">
           {/* <span className="font-bold">Fusion Dot Architects</span> */}
-          <Image src="https://res.cloudinary.com/dytr7tpmt/image/upload/v1769268145/white_logo_lettering_wc9ti7.png" alt="Fusion Dot Architects" width={100} height={100} />
+          <Image src={IMAGES.logo} alt="Fusion Dot Architects" width={100} height={100} />
         </div>
         <div className="hidden md:flex space-x-8 text-sm">
           {navItems.map((item) => (

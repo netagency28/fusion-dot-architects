@@ -8,6 +8,9 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft, ArrowRight } from "lucide-react"
 import { Navbar } from "@/components/Navbar"
+import { IMAGES } from "@/lib/images"
+
+const { projects: P } = IMAGES
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef(null)
@@ -33,7 +36,7 @@ export default function Work() {
       title: "Fish Market Design",
       year: "2024",
       category: "Commercial",
-      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692671/MA_FISH_3_h2dexk.jpg",
+      image: P.maFish3,
       description: "Innovative fish market design combining functionality with modern commercial architecture.",
     },
     {
@@ -41,7 +44,7 @@ export default function Work() {
       title: "Modern Architectural Design",
       year: "2024",
       category: "Architecture",
-      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692536/10_1_-_Photo_zo09ut.jpg",
+      image: P.photo10_1,
       description: "Contemporary architectural design showcasing innovative structural solutions.",
     },
     {
@@ -49,7 +52,7 @@ export default function Work() {
       title: "Modern Interior Design",
       year: "2024",
       category: "Interior",
-      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757693036/02-6_rje7ml.jpg",
+      image: P.interior02_6,
       description: "Contemporary interior design with clean lines and modern aesthetics.",
     },
     {
@@ -57,7 +60,7 @@ export default function Work() {
       title: "Office Complex",
       year: "2024",
       category: "Commercial",
-      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692662/11_5_-_Photo_le1raa.jpg",
+      image: P.photo11_5,
       description: "Sophisticated office complex with innovative design solutions.",
     },
     {
@@ -65,7 +68,7 @@ export default function Work() {
       title: "Residential Architecture",
       year: "2024",
       category: "Architecture",
-      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692526/10_2_-_Photo_jnta93.jpg",
+      image: P.photo10_2,
       description: "Elegant residential architecture with clean lines and functional design.",
     },
     {
@@ -73,7 +76,7 @@ export default function Work() {
       title: "Luxury Interior Design",
       year: "2024",
       category: "Interior",
-      image: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1757693017/4_uaf35x.jpg",
+      image: P.luxury4,
       description: "High-end interior design with premium materials and finishes.",
     },
   ]
@@ -91,7 +94,7 @@ export default function Work() {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="absolute inset-0"
         >
-          <Image src="/images/hero-architecture.jpg" alt="Our Work" fill className="object-cover" priority />
+          <Image src={IMAGES.heroArchitecture} alt="Our Work" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-black/40" />
         </motion.div>
 

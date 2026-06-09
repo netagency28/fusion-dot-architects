@@ -4,27 +4,28 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 import Image from "next/image"
 import { useRef } from "react"
+import { IMAGES } from "@/lib/images"
 
 const services = [
   {
     title: "Architecture Design",
     description: "We offer end-to-end solutions for your space — from architectural planning and turnkey interiors to structural execution and custom furniture fabrication.",
-    icon: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1756997151/architecture-icon_o3sj6q.png",
+    icon: IMAGES.serviceIcons.architecture,
   },
   {
     title: "Interior Design",
     description: "Fusion Dot Architects strives toward a socially just and equitable world where buildings positively contribute to the environment.",
-    icon: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1756997151/interior-design_sf70jw.png",
+    icon: IMAGES.serviceIcons.interior,
   },
   {
     title: "Construction Services",
     description: "Our construction service includes foundation, structural works, electrical, plumbing, flooring, and finishing with a high emphasis on quality control and project timelines.",
-    icon: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1756997151/contruction_ojpgny.png",
+    icon: IMAGES.serviceIcons.construction,
   },
   {
     title: "Furniture Design",
     description: "All services are customizable, and we work closely with clients to ensure that the vision is brought to life within scope and budget.",
-    icon: "https://res.cloudinary.com/dytr7tpmt/image/upload/v1756997151/chair_phertq.png",
+    icon: IMAGES.serviceIcons.furniture,
   },
 ]
 
@@ -64,32 +65,32 @@ export default function AboutServices() {
         </div>
       </div>
 
-      {/* Our Services – Scrollable */}
+      {/* Our Services */}
       <div>
         <p className="uppercase text-xs tracking-widest text-gray-500 mb-8">Our Services</p>
 
         <div
           ref={scrollRef}
-          className="overflow-x-auto scrollbar-hide -mx-2"
+          className="md:overflow-x-auto md:scrollbar-hide md:-mx-2"
         >
-          <div className="flex space-x-6 px-2 pb-4 snap-x snap-mandatory">
-            {services.map((service, index) => (
-              <div
-                key={service.title}
-                className="w-[30%] snap-start border border-gray-200 p-6 shrink-0 bg-white hover:shadow-md transition"
-              >
-                <Image
-                  src={service.icon}
-                  alt={service.title}
-                  width={60}
-                  height={60}
-                  className="mb-4"
-                />
-                <hr className="border-gray-300 mb-4" />
-                <h3 className="text-lg font-medium mb-2">{service.title}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">{service.description}</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 gap-6 md:flex md:gap-6 md:px-2 md:pb-4 md:snap-x md:snap-mandatory">
+              {services.map((service) => (
+                <div
+                  key={service.title}
+                  className="w-full border border-gray-200 p-6 bg-white hover:shadow-md transition md:w-[30%] md:min-w-[280px] md:shrink-0 md:snap-start"
+                >
+                  <Image
+                    src={service.icon}
+                    alt={service.title}
+                    width={60}
+                    height={60}
+                    className="mb-4"
+                  />
+                  <hr className="border-gray-300 mb-4" />
+                  <h3 className="text-lg font-medium mb-2">{service.title}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">{service.description}</p>
+                </div>
+              ))}
           </div>
         </div>
       </div>

@@ -9,6 +9,7 @@ import Link from "next/link"
 import { ArrowLeft, Calendar, Users, Square } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Navbar } from "@/components/Navbar"
+import { IMAGES } from "@/lib/images"
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef(null)
@@ -36,21 +37,14 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
     client: "The Kumar Family",
     area: "4,500 sq ft",
     duration: "18 months",
-    heroImage: "/images/project-1.jpg",
+    heroImage: IMAGES.projectDetail.hero,
     description:
       "This contemporary family home represents a perfect balance between modern design principles and comfortable living. Located in the heart of Mumbai, the residence seamlessly blends indoor and outdoor spaces while maximizing natural light and ventilation.",
     challenge:
       "The primary challenge was to create a spacious, light-filled home on a relatively compact urban plot while ensuring privacy from neighboring buildings and busy streets.",
     solution:
       "Our design solution involved creating a series of interconnected courtyards that bring natural light deep into the home while providing private outdoor spaces. The use of local materials and contemporary forms creates a home that feels both modern and rooted in its context.",
-    images: [
-      "/images/project-1.jpg",
-      "/images/project-2.jpg",
-      "/images/project-3.jpg",
-      "/images/interior-design.jpg",
-      "/images/modern-building.jpg",
-      "/images/construction-site.jpg",
-    ],
+    images: [...IMAGES.projectDetail.gallery],
   }
 
   return (

@@ -9,6 +9,9 @@ import Link from "next/link"
 import { ArrowLeft, Building, Home, Sofa, Hammer } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Navbar } from "@/components/Navbar"
+import { IMAGES } from "@/lib/images"
+
+const { projects: P } = IMAGES
 import { Nabla } from "next/font/google"
 
 function AnimatedSection({
@@ -51,7 +54,7 @@ export default function Services() {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="absolute inset-0"
         >
-          <Image src="https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692669/MA_FISH_4_jdbwug.jpg" alt="Our Services" fill className="object-cover" priority />
+          <Image src={P.maFish4} alt="Our Services" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-black/40" />
         </motion.div>
 
@@ -94,7 +97,7 @@ export default function Services() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div whileHover={{ scale: 1.02 }} className="relative h-96">
-              <Image src="https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692536/10_1_-_Photo_zo09ut.jpg" alt="Architecture Services" fill className="object-cover rounded-lg" />
+              <Image src={P.photo10_1} alt="Architecture Services" fill className="object-cover rounded-lg" />
             </motion.div>
             <div>
               <div className="flex items-center mb-6">
@@ -150,7 +153,7 @@ export default function Services() {
             </div>
             <motion.div whileHover={{ scale: 1.02 }} className="relative h-96">
               <Image
-                src="https://res.cloudinary.com/dytr7tpmt/image/upload/v1757693036/02-6_rje7ml.jpg"
+                src={P.interior02_6}
                 alt="Interior Design Services"
                 fill
                 className="object-cover rounded-lg"
@@ -166,7 +169,7 @@ export default function Services() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div whileHover={{ scale: 1.02 }} className="relative h-96">
               <Image
-                src="https://res.cloudinary.com/dytr7tpmt/image/upload/v1757693021/01_6_-_Photo_zocpd0.jpg"
+                src={P.photo01_6}
                 alt="Furniture Design Services"
                 fill
                 className="object-cover rounded-lg"
@@ -226,7 +229,7 @@ export default function Services() {
             </div>
             <motion.div whileHover={{ scale: 1.02 }} className="relative h-96">
               <Image
-                src="https://res.cloudinary.com/dytr7tpmt/image/upload/v1757692619/48793eb6-dee6-407a-95f3-7a0ea311c4e9_hwvdna.jpg"
+                src={P.commercialDev}
                 alt="Construction Services"
                 fill
                 className="object-cover rounded-lg"

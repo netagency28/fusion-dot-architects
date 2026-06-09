@@ -11,7 +11,8 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Navbar } from "@/components/Navbar";
-import ContactForm from "@/components/ContactForm";
+import ContactForm from "@/components/ContactForm"
+import { IMAGES } from "@/lib/images"
 
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
@@ -70,7 +71,7 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="relative h-96 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/architectural-drawing.jpg" alt="Contact Us" fill className="object-cover" priority />
+          <Image src={IMAGES.contactHero} alt="Contact Us" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-black/40" />
         </div>
 

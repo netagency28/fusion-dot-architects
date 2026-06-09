@@ -9,6 +9,7 @@ import Link from "next/link"
 import { ArrowLeft, Award, Users, Target, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Navbar } from "@/components/Navbar"
+import { IMAGES } from "@/lib/images"
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef(null)
@@ -41,7 +42,7 @@ export default function About() {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="absolute inset-0"
         >
-          <Image src="/images/modern-building.jpg" alt="About Us" fill className="object-cover" priority />
+          <Image src={IMAGES.aboutHero} alt="About Us" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-black/40" />
         </motion.div>
 
@@ -90,7 +91,7 @@ export default function About() {
               </p>
             </div>
             <motion.div whileHover={{ scale: 1.02 }} className="relative h-96">
-              <Image src="/images/interior-design.jpg" alt="Our Studio" fill className="object-cover rounded-lg" />
+              <Image src={IMAGES.studio} alt="Our Studio" fill className="object-cover rounded-lg" />
             </motion.div>
           </div>
         </div>
@@ -150,19 +151,19 @@ export default function About() {
                 name: "Arjun Mehta",
                 role: "Founding Principal",
                 bio: "With over 20 years of experience, Arjun leads our architectural vision and client relationships.",
-                image: "/images/team-member.jpg",
+                image: IMAGES.teamMember,
               },
               {
                 name: "Priya Sharma",
                 role: "Design Director",
                 bio: "Priya oversees our interior design practice and ensures every space tells a unique story.",
-                image: "/images/team-member.jpg",
+                image: IMAGES.teamMember,
               },
               {
                 name: "Vikram Singh",
                 role: "Construction Head",
                 bio: "Vikram brings our designs to life with his expertise in construction and project management.",
-                image: "/images/team-member.jpg",
+                image: IMAGES.teamMember,
               },
             ].map((member, index) => (
               <motion.div

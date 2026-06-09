@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { IMAGES } from "@/lib/images"
 
 export default function BuildCTASection() {
   return (
@@ -7,7 +8,7 @@ export default function BuildCTASection() {
       {/* Background Image with Overlay Content */}
       <div className="relative h-[600px] w-full overflow-hidden">
         <Image
-          src="https://minnaro.vamtam.com/wp-content/uploads/2025/05/GettyImages-1401941633.jpg" // Place image in /public/images
+          src={IMAGES.buildCtaBackground}
           alt="Build CTA Background"
           fill
           className="object-cover"
@@ -20,7 +21,7 @@ export default function BuildCTASection() {
           {/* <div className="flex justify-end">
             <div className="relative w-[240px] md:w-[280px] h-[360px]">
               <Image
-                src="https://res.cloudinary.com/dytr7tpmt/image/upload/v1757005989/4_wucrx0.jpg"
+                src={IMAGES.collinCollege}
                 alt="Collin College"
                 fill
                 className="object-cover"
