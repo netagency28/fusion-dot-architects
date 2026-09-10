@@ -17,7 +17,7 @@ function HeroSlider() {
   }, []);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-dvh w-full overflow-hidden">
       {images.map((src, index) => (
         <motion.div
           key={index}
@@ -26,7 +26,18 @@ function HeroSlider() {
           transition={{ duration: 1 }}
           className="absolute inset-0 z-0"
         >
-          <Image src={src} alt="Architecture Project" fill className="object-cover" />
+          {src.endsWith(".mp4") ? (
+            <video
+              src={src}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          ) : (
+            <Image src={src} alt="Architecture Project" fill className="object-cover" />
+          )}
           <div className="absolute inset-0 bg-black/30" />
         </motion.div>
       ))}

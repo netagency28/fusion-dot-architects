@@ -3,6 +3,7 @@
  */
 
 const CLOUDINARY = "https://res.cloudinary.com/dytr7tpmt/image/upload"
+const CLOUDINARY_VIDEO = "https://res.cloudinary.com/dytr7tpmt/video/upload"
 
 export const IMAGES = {
   // ── Branding ──────────────────────────────────────────────────────────────
@@ -12,9 +13,10 @@ export const IMAGES = {
   // ── Hero & Page Banners ───────────────────────────────────────────────────
   heroArchitecture: "/images/hero-architecture.jpg",
   heroSlides: [
-    `${CLOUDINARY}/v1757692536/10_1_-_Photo_zo09ut.jpg`,
-    `${CLOUDINARY}/v1757693036/02-6_rje7ml.jpg`,
-    `${CLOUDINARY}/v1757692671/MA_FISH_3_h2dexk.jpg`,
+    `${CLOUDINARY_VIDEO}/v1789051493/ANIMATION_gu7o38.mp4`,
+    // `${CLOUDINARY}/v1757692536/10_1_-_Photo_zo09ut.jpg`,
+    // `${CLOUDINARY}/v1757693036/02-6_rje7ml.jpg`,
+    // `${CLOUDINARY}/v1757692671/MA_FISH_3_h2dexk.jpg`,
   ],
   aboutHero: "/images/modern-building.jpg",
   contactHero: "/images/architectural-drawing.jpg",
